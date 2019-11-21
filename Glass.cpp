@@ -12,15 +12,15 @@ std::ostream& operator<<(std::ostream& os, const Glass& dt) {
     std::vector<std::vector<char>> glasses = dt.getGlasses();
     std::string output("");
     int i = 0;
-    for (auto it2 = glasses.rbegin()->begin(); it2 < glasses.rbegin()->end(); i++, it2++) {
-        for (auto it = glasses.rbegin(); it < glasses.rend(); it++) {
+    for (auto it2 = glasses.rbegin()->begin(); it2 != glasses.rbegin()->end(); i++, it2++) {
+        for (auto it = glasses.rbegin(); it != glasses.rend(); it++) {
             output += (*it)[i];
             output += " ";
         }
         output += "\n";
     }
     int colNum = glasses.size()-1;
-    for (auto itColNum = glasses.begin(); itColNum < glasses.end(); itColNum++, colNum--) {
+    for (auto itColNum = glasses.begin(); itColNum != glasses.end(); itColNum++, colNum--) {
         output += std::to_string(colNum);
         output += " ";
     }
@@ -52,7 +52,7 @@ Color Glass::getRandomColor() {
 }
 
 Glass::Glass(int numCol, int numGl): glasses(numCol, std::vector<char>(0)) {
-    for (auto it = glasses.begin(); it < glasses.end(); it++) {
+    for (auto it = glasses.begin(); it != glasses.end(); it++) {
         int h = std::experimental::randint(0, numGl-1);
         Color color1 = getRandomColor();
         Color color2 = getRandomColor();
@@ -82,7 +82,7 @@ int Glass::constructCol(std::vector<char> glasses, int col) {
     else {
         auto itGlass = Glass::glasses[col].begin();
         auto itConstruct = glasses.begin();
-        for (; itGlass < Glass::glasses[col].end() && itConstruct < glasses.end(); itGlass++, itConstruct++) {
+        for (; itGlass != Glass::glasses[col].end() && itConstruct != glasses.end(); itGlass++, itConstruct++) {
             if (*itGlass == *itConstruct) {
                 *itGlass = 'x';
             }
@@ -96,7 +96,7 @@ int Glass::constructCol(std::vector<char> glasses, int col) {
 
 bool Glass::isComplete(int col) {
     bool isComplete = true;
-    for (auto it = Glass::glasses[col].begin(); it < Glass::glasses[col].end() && isComplete; it++) {
+    for (auto it = Glass::glasses[col].begin(); it != Glass::glasses[col].end() && isComplete; it++) {
         if (*it != 'x') {
             isComplete = false;
         }
@@ -106,7 +106,7 @@ bool Glass::isComplete(int col) {
 
 bool Glass::isInConstruction(int col) {
     bool isInConstruction = false;
-    for (auto it = Glass::glasses[col].begin(); it < Glass::glasses[col].end() && !isInConstruction; it++) {
+    for (auto it = Glass::glasses[col].begin(); it != Glass::glasses[col].end() && !isInConstruction; it++) {
         if (*it == 'x') {
             isInConstruction = true;
         }
