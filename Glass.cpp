@@ -1,3 +1,4 @@
+//Jeremie St-Pierre et Frederik Lafleche
 #include "Glass.h"
 #include "Color.h"
 
