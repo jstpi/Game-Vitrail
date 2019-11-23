@@ -1,3 +1,11 @@
+/**
+ * @file Lots.h
+ *
+ * @brief Classe Lots contenant les lots et les surplus.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #ifndef LOTS_H
 #define LOTS_H
 

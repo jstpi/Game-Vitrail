@@ -1,3 +1,11 @@
+/**
+ * @file projectCSI2772.cpp
+ *
+ * @brief Déroulement principale du jeu.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #include "Vitrail.h"
 #include "Lots.h"
 #include "Couleur.h"

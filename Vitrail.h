@@ -1,3 +1,11 @@
+/**
+ * @file Vitrail.h
+ *
+ * @brief Classe Vitrail contenant les vitres.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #ifndef VITRE_H
 #define VITRE_H
 

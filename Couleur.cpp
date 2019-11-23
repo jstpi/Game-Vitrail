@@ -1,3 +1,11 @@
+/**
+ * @file Couleur.cpp
+ *
+ * @brief Methodes pour manipuler les couleurs.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #include "Couleur.h"
 #include <experimental/random>
 

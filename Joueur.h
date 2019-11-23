@@ -1,3 +1,11 @@
+/**
+ * @file Joueur.h
+ *
+ * @brief Classe Joueur contenant le nom, points, position du vitrier et vitrail.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #ifndef JOUEUR_H
 #define JOUEUR_H
 

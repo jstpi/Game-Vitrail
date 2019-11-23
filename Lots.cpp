@@ -1,3 +1,11 @@
+/**
+ * @file Lots.cpp
+ *
+ * @brief Methodes pour construire et manipuler (ramasser les vitres) des lots.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #include "Lots.h"
 #include "Couleur.h"
 #include <iostream>

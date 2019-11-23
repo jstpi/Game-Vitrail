@@ -1,3 +1,11 @@
+/**
+ * @file Couleur.h
+ *
+ * @brief Enumeration des couleurs.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #ifndef COLOR_H
 #define COLOR_H
 

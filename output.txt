@@ -1,0 +1,83 @@
+
+*****************************
+*                           *
+*        V I T R A I L      *
+*                           *
+*****************************
+
+------------ Joueurs ------------
+Premier joueur, entrez votre nom: JER
+Deuxieme joueur, entrez votre nom: FRED
+---------------------------------
+
+********* Jeu 5 phases **********
+
+~~~~~~~~~~~~~~~~~~~(phase 1)~~~~~~~~~~~~~~~~~~~~~~
+
+--> Au tour du premier joueur.
+
+JER : 0 points 
+Vitrier a la position 6.
+
+Plan: 
+R R G G G R R 
+R R B G J R R 
+R R B G J R R 
+R B B J J B R 
+R B B J J B R 
+6 5 4 3 2 1 0 
+
+Lots: 
+G O O J O 
+R J R B J 
+R R G B B 
+R J B G B 
+4 3 2 1 0 
+
+Surplus: 
+[]
+
+(1) Action: 
+Entrez votre choix (1:poser vitre, 2:deplacer vitrier): 1
+
+(2) Poser Vitre: 
+Entrez l'index du lots (-1:surplus, x:lot): 1
+Choisissez votre couleur (1:Bleu, 2:Gris, 3:Orange, 4:Rose, 5:Jaune): 2
+Entrez l'index du vitrail (x:vitrail): 4
+
+JER : 0 points 
+Vitrier a la position 4.
+
+Plan: 
+R R x G G R R 
+R R B G J R R 
+R R B G J R R 
+R B B J J B R 
+R B B J J B R 
+6 5 4 3 2 1 0 
+
+Lots: 
+G O O . O 
+R J R . J 
+R R G . B 
+R J B . B 
+4 3 2 1 0 
+
+Surplus: 
+[JBB]
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~(phase 1)~~~~~~~~~~~~~~~~~~~~~~
+
+--> Au tour du second joueur.
+
+...
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*** Fin du jeu ***
+
+JER : 7
+FRED : -1
+
+*** JER est le GAGNANT! ***

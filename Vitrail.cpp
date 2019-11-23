@@ -1,6 +1,13 @@
+/**
+ * @file Vitrail.cpp
+ *
+ * @brief Methodes pour construire et manipuler (construire les vitres) les vitres du vitrail.
+ *
+ * @author Jeremie St-Pierre (8628942), Frederik Lafleche (8616081)
+ */
+
 #include "Vitrail.h"
 #include "Couleur.h"
-
 #include <experimental/random>
 #include <iostream>
 #include <vector>
