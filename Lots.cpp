@@ -71,6 +71,9 @@ std::vector<char> Lots::ramasseVitre(char couleur, int numeroLot){
         if (Lots::surplus.size()==0){
             throw std::invalid_argument("!! Le surplus est vide; le tour reste le meme !!");
         }
+        if (std::find(Lots::surplus.begin(), Lots::surplus.end(), couleur) == Lots::surplus.end()) {
+            throw std::invalid_argument("!! La couleur specifie n'est pas presente dans le surplus; le tour reste le meme !!");
+        }
 
         for (it = surplus.begin(); it != surplus.end(); it++){
             if (*it == couleur){
@@ -79,13 +82,13 @@ std::vector<char> Lots::ramasseVitre(char couleur, int numeroLot){
                 it--;
             }     
         }
-        if (ret.size() == 0) {
-            throw std::invalid_argument("!! La couleur specifie n'est pas presente dans le surplus; le tour reste le meme !!");
-        }
     }
     else if (numeroLot>=0 && numeroLot<Lots::cols){
         if (Lots::lots[numeroLot][0]==static_cast<char>(Couleur::vide)){
             throw std::invalid_argument("!! Le lot a deja ete selectionne; le tour reste le meme !!");
+        }
+        if (std::find(Lots::lots[numeroLot], Lots::lots[numeroLot]+Lots::rangs, couleur) == Lots::lots[numeroLot]+Lots::rangs) {
+            throw std::invalid_argument("!! La couleur specifie n'est pas presente dans le lots " + std::to_string(numeroLot) + "; le tour reste le meme !!");
         }
         for (int i=0; i<Lots::rangs; i++){
             if(Lots::lots[numeroLot][i]==couleur){

@@ -20,14 +20,16 @@ class Lots {
 
     public:
         Lots(int cols, int rangs);
-        void reset();
-        std::vector<char> ramasseVitre(char couleur, int numeroLot);
+
         char** getLots() const {return lots;}
         int getCols() const{return cols;}
         int getRangs() const{return rangs;}
-        bool isTaken(int);
-        bool isLotsEmpty();
         std::vector<char> getSurplus() const {return surplus;}
+
+        void reset();
+        std::vector<char> ramasseVitre(char couleur, int numeroLot);
+        bool isLotsEmpty();
+        
         ~Lots() {
             delete[] lots;
         }

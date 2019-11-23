@@ -21,6 +21,14 @@ class Joueur{
 
     public:
         Joueur(std::string name, Vitrail* vitrail): name(name), points(0), position(vitrail->getCols()-1), vitrail(vitrail){}
+
+        std::string getName() const {return name;}
+        int getPoints() const {return points;}
+        int getPosition() const {return position;}
+        Vitrail* getVitrail() const {return vitrail;}
+
+        void setPosition(int p){position=p;}
+
         Joueur& operator-=(int x){
             if (position - x < 0 || position - x > position) {
                 throw std::out_of_range("!! Vitrier ne peut pas atteindre la position du vitrail; le tour reste le meme !!");
@@ -35,13 +43,9 @@ class Joueur{
             position = vitrail->getCols()-1;
             return *this;
         }
-        std::string getName() const {return name;}
-        int getPoints() const {return points;}
+        
         void addPoints(int p) { points += p; }
         void removePoints(int p) { points -= p; }
-        int getPosition() const {return position;}
-        void setPosition(int p){position=p;}
-        Vitrail* getVitrail() const {return vitrail;}
 };
 
 std::ostream& operator<<(std::ostream& os, const Joueur& j) {

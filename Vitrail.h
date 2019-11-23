@@ -20,13 +20,16 @@ class Vitrail {
 
     public:
         Vitrail(int cols, int rangs);
+
         char** getVitres() const {return vitres;}
         int getCols() const {return cols;}
         int getRangs() const {return rangs;}
+
         int construireVitrail(std::vector<char> vitres, int col);
         bool estComplete(int colonne);
         bool estEnConstruction(int colonne);
         int vitrailCompletParCol(int colonne);
+
         ~Vitrail() {
             delete[] vitres;
         }

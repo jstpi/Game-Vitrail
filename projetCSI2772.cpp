@@ -211,7 +211,7 @@ int main() {
                     tour = !tour;
                 }
                 else { 
-                    std::cout << "!! Joueur 2 dejas a la position; le tour reste le meme !!" << std::endl;
+                    std::cout << "!! Joueur 2 dejas a la position " << vitrail2.getCols()-1 <<"; le tour reste le meme !!" << std::endl;
                 }
             }
         }
