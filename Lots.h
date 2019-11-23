@@ -18,6 +18,7 @@ class Lots {
         int getCols() const{return cols;}
         int getRangs() const{return rangs;}
         bool isTaken(int);
+        bool isLotsEmpty();
         std::vector<char> getSurplus() const {return surplus;}
         ~Lots() {
             delete[] lots;

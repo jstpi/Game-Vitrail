@@ -12,7 +12,7 @@ std::ostream& operator<<(std::ostream& os, const Vitrail& v) {
     char** vitres = v.getVitres();
     int cols = v.getCols();
     int rangs = v.getRangs();
-    std::string colorOut;
+    std::string colorOut = "Plan: \n";
     std::string colOut;
     for (int j = 0; j < rangs; j++) {
         for (int i = cols-1; i >= 0; i--) {
@@ -30,7 +30,7 @@ std::ostream& operator<<(std::ostream& os, const Vitrail& v) {
     return os;
 }
 
-bool isNone(char color) {
+bool isComplet(char color) {
     return (color == static_cast<char>(Couleur::complet));
 }
 
@@ -54,7 +54,7 @@ Vitrail::Vitrail(int cols, int rangs): vitres(new char*[cols]), cols(cols), rang
 int Vitrail::construireVitrail(std::vector<char> vitres, int colonne) {
     int vitreNonPlaces = 0;
     if (estComplete(colonne)) {
-        throw std::invalid_argument("Colonne vitrail dejas complete.");
+        throw std::invalid_argument("!! Colonne vitrail dejas complete; le tour reste le meme !!");
     }
     else {
         auto it = vitres.begin();
@@ -76,7 +76,7 @@ int Vitrail::construireVitrail(std::vector<char> vitres, int colonne) {
 bool Vitrail::estComplete(int colonne) {
     char* begin = Vitrail::vitres[colonne];
     char* end = Vitrail::vitres[colonne]+Vitrail::rangs;
-    char* couleur = std::find_if_not(begin, end, isNone);
+    char* couleur = std::find_if_not(begin, end, isComplet);
     if (couleur != end) {
         return false;
     }
@@ -88,11 +88,21 @@ bool Vitrail::estComplete(int colonne) {
 bool Vitrail::estEnConstruction(int colonne) {
     char* begin = Vitrail::vitres[colonne];
     char* end = Vitrail::vitres[colonne]+Vitrail::rangs;
-    char* couleur = std::find_if(begin, end, isNone);
+    char* couleur = std::find_if(begin, end, isComplet);
     if (couleur != end) {
         return true;
     }
     else {
         return false;
     }
+}
+
+int Vitrail::vitrailCompletParCol(int colonne) {
+    int countVitrailComplet(0);
+    for (int j = 0; j < Vitrail::rangs; j++) {
+        if (Vitrail::vitres[colonne][j] == static_cast<char>(Couleur::complet)){
+            countVitrailComplet++;
+        }
+    }
+    return countVitrailComplet;
 }

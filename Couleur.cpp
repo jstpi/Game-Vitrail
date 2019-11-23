@@ -26,16 +26,16 @@ Couleur getCouleurAleatoire() {
 Couleur getCouleurParChoix(int couleurChoix){
     switch (couleurChoix)
     {
-    case 0:
+    case 1:
         return Couleur::bleu;
         break;
-    case 1:
+    case 2:
         return Couleur::gris;
         break;
-    case 2:
+    case 3:
         return Couleur::orange;
         break;
-    case 3:
+    case 4:
         return Couleur::rose;
         break;
     default:

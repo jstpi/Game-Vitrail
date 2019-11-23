@@ -18,6 +18,7 @@ class Vitrail {
         int construireVitrail(std::vector<char> vitres, int col);
         bool estComplete(int colonne);
         bool estEnConstruction(int colonne);
+        int vitrailCompletParCol(int colonne);
         ~Vitrail() {
             delete[] vitres;
         }
