@@ -5,15 +5,23 @@
 #include <iostream>
 
 class Lots {
-    std::vector<std::vector<char>> lots;
+    char** lots;
+    int cols;
+    int rangs;
     std::vector<char> surplus;
 
     public:
-        Lots();
+        Lots(int cols, int rangs);
         void reset();
         std::vector<char> ramasseVitre(char couleur, int numeroLot);
-        std::vector<std::vector<char>> getLots() const {return lots;}
+        char** getLots() const {return lots;}
+        int getCols() const{return cols;}
+        int getRangs() const{return rangs;}
+        bool isTaken(int);
         std::vector<char> getSurplus() const {return surplus;}
+        ~Lots() {
+            delete[] lots;
+        }
 
 };
 

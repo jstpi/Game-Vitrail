@@ -12,5 +12,6 @@ enum class Couleur {
 };
 
 Couleur getCouleurAleatoire();
+Couleur getCouleurParChoix(int couleurChoix);
 
 #endif // COLOR_H

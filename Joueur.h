@@ -14,8 +14,8 @@ class Joueur{
     public:
         Joueur(std::string name, Vitrail* vitrail): name(name), points(0), position(vitrail->getCols()-1), vitrail(vitrail){}
         Joueur& operator-=(int x){
-            if (position - x < 0) {
-                throw std::out_of_range("Exterieur du vitrail");
+            if (position - x < 0 && position - x > position) {
+                throw std::out_of_range("Vitrier ne peut pas atteindre la position du vitrail.");
             }
             position -= x;
             return *this;
@@ -29,6 +29,8 @@ class Joueur{
         }
         std::string getName() const {return name;}
         int getPoints() const {return points;}
+        void addPoints(int p) { points += p; }
+        void removePoints(int p) { points -= p; }
         int getPosition() const {return position;}
         Vitrail* getVitrail() const {return vitrail;}
 };

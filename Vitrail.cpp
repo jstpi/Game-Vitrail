@@ -54,7 +54,7 @@ Vitrail::Vitrail(int cols, int rangs): vitres(new char*[cols]), cols(cols), rang
 int Vitrail::construireVitrail(std::vector<char> vitres, int colonne) {
     int vitreNonPlaces = 0;
     if (estComplete(colonne)) {
-        throw std::invalid_argument("colonne dejas complete");
+        throw std::invalid_argument("Colonne vitrail dejas complete.");
     }
     else {
         auto it = vitres.begin();
