@@ -1,5 +1,4 @@
-# CSI2772-projet
-Jeu Vitrail
+# Jeu Vitrail
 
 ## Membre du projet
 * Jérémie St-Pierre (8628942)
