@@ -1,4 +1,8 @@
 # Jeu Vitrail
+Project pour le cours CSI2772 de l'Université d'Ottawa. Ce project est une implémentation en c++ d'une version du jeu vitrail. Ce jeu est affiché dans le terminal.
+
+## Instruction
+
 
 ## Membre du projet
 * Jérémie St-Pierre (8628942)
