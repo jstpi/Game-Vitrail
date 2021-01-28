@@ -1,7 +1,7 @@
 # Jeu Vitrail
 Project pour le cours CSI2772 de l'Université d'Ottawa. Ce project est une implémentation en c++ d'une version du jeu vitrail. Ce jeu est affiché dans le terminal.
 
-## Instruction
+## Instruction du jeu
 
 ### Context
 Le but du jeu est d'accumuler le plus le point possible en complétant des colonnes dans son plan de vitrine.
@@ -118,27 +118,15 @@ Surplus:
 [JBB]
 ```
 
-## Membre du projet
-* Jérémie St-Pierre (8628942)
-* Frederik Laflèche (8616081)
-
-## Exécuter le jeu (g++)
+## Exécuter le jeu
+1. Installer un compilateur [GCC](https://gcc.gnu.org/)
+2. Télécharger ce code source
+3. Executer ces commandes dans le fichier du projet:
 ```
 > g++ Vitrail.cpp Couleur.cpp Lots.cpp projetCSI2772.cpp -o main
 > ./main
 ```
 
-## Source
-### .h
-* Couleur.h
-* Joueur.h
-* Lots.h
-* Vitrail.h
-### .cpp
-* Couleur.cpp
-* Lots.cpp
-* Vitrail.cpp
-* projetCSI2772.cpp
-### autre
-* output.txt (exemple de sortie)
-
+## Membre du projet
+* Jérémie St-Pierre (8628942)
+* Frederik Laflèche (8616081)
