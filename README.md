@@ -1,13 +1,13 @@
 # Jeu Vitrail
-Project pour le cours CSI2772 de l'Université d'Ottawa. Ce project est une implémentation en c++ d'une version du jeu vitrail. Ce jeu est affiché dans le terminal.
+Project pour le cours CSI2772 de l'Université d'Ottawa. Ce project est une implémentation en c++ d'une version du jeu: Vitrail. Ce jeu est affiché dans le terminal.
 
 ## Instruction du jeu
 
 ### Context
-Le but du jeu est d'accumuler le plus le point possible en complétant des colonnes dans son plan de vitrine.
+Le but du jeu est d'accumuler le plus de point possible en complétant des colonnes dans son plan de vitrine.
 
 ### Pièces de jeu
-* **Plan**: 7 colonnes de couleurs uniques pour chaque joueur à compléter en assignant la même couleur à la position
+* **Plan**: 7 colonnes de couleurs uniques pour chaque joueur à compléter
 
 ```
 (ex)
@@ -19,7 +19,7 @@ R B B J J B R
 6 5 4 3 2 1 0
 ```
 
-* **Lots**: 5 colonnes de couleurs partagées aux joueurs à utiliser pour appliquer à la complétion du plan
+* **Lots**: 5 colonnes de couleurs partagées aux 2 joueurs pour appliquer à la complétion du plan
 
 ```
 (ex)
@@ -30,7 +30,7 @@ R J B G B
 4 3 2 1 0 
 ```
 
-* **Surplus**: liste de couleurs restant partagée aux joueurs à utiliser pour appliquer à la complétion du plan
+* **Surplus**: liste de couleurs restant partagée aux 2 joueurs pour appliquer à la complétion du plan
 ```
 (ex)
 [JBB]
@@ -92,7 +92,7 @@ Entrez l'index du vitrail (x:vitrail): 4
 
 -> sous ce choix d'action, une seule couleur grise fut prise du lot de la colonne 1 pour compléter la couleur grise de plan à la colonne 4
 
--> cela met le joueur à la position 4, maintenant sous contrainte de faire des actions sur la colonne d'index 4 -> 0 pour son prochain tour
+-> cela met le joueur à la position 4, maintenant sous contrainte de faire des actions sur la colonne d'index 4 -> 0 du plan pour son prochain tour
 
 ```
 JER : 0 points 
@@ -129,5 +129,5 @@ Surplus:
 ```
 
 ## Membre du projet
-* Jérémie St-Pierre (8628942)
-* Frederik Laflèche (8616081)
+* Jérémie St-Pierre
+* Frederik Laflèche
