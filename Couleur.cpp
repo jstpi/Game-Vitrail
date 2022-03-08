@@ -14,7 +14,7 @@ Couleur getCouleurAleatoire() {
     switch (x)
     {
     case 0:
-        return Couleur::bleu;
+        return Couleur::gris;
         break;
     case 1:
         return Couleur::gris;
