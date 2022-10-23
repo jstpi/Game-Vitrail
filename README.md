@@ -1,3 +1,4 @@
+![splash2 (1)](https://user-images.githubusercontent.com/111090400/197368023-6db91707-ec81-499c-833a-9f2ba98d46f2.png)
 # Jeu Vitrail
 Project pour le cours CSI2772 de l'Université d'Ottawa. Ce project est une implémentation en c++ d'une version du jeu: Vitrail. Ce jeu est affiché dans le terminal.
 
